@@ -5,7 +5,7 @@ import {images} from '../../constants'
 import FormField from '../../components/FormField'
 import CustomButton from '../../components/customButton'
 import { Link, router } from 'expo-router'
-import { createUser } from '../../lib/appWrite'
+import { createUser, getCurrentUser } from '../../lib/appWrite'
 import { useGlobalContext } from '../../context/GlobalProvider'
 
 const SignUp = () => {
@@ -26,7 +26,6 @@ const SignUp = () => {
       const result = await createUser(form.email,form.password,form.username);
       setUser(result)
       setIsLoggedIn(true)
-      // set it to global set ...
       router.replace('/home')
     }
     catch(e){
