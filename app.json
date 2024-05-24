@@ -23,10 +23,18 @@
       "package": "com.aora.aora"
     },
     "web": {
-      "favicon": "./assets/favicon.png"     
+      "favicon": "./assets/favicon.png"
     },
     "plugins": [
       "expo-router"
-    ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "4022dff0-9650-4e58-9fd4-d6af76da8b1a"
+      }
+    }
   }
 }
